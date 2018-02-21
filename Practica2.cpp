@@ -80,14 +80,6 @@ int main(){
 
 
 
-
-
-/*
-			string **mat = (string **)malloc(Q.size() * sizeof(string*));
-			for(unsigned int i = 0; i < Q.size(); i++)
-				mat[i] = (string *)malloc(Z.size() * sizeof(string));
-*/
-
 		//Se llena la matriz mediante entradas del usuario
 	for(unsigned int i=0; i< Q.size();i++){
 		for (unsigned int j=0; j<Z.size(); j++){
@@ -100,13 +92,8 @@ int main(){
 	}//
 
 
-	/*for(unsigned int u=0; u< Q.size();u++){
-			for (unsigned int a=0; a<Z.size(); a++){
-				cout << "d(" << Q[u] << ", " << Z[a] << ")=" << transiciones[u][a]<<endl;
 
-			}
-		}
-*/
+
 	cout << "Ingresa las cadenas a analizar, separadas por comas" << endl;
 	getline(cin, cads);
 	//recibe las cadenas a analizar
@@ -121,7 +108,7 @@ int main(){
 		 //recorre el vector W mediante un iterador y a traves de este, llama a la funcion
 		 //analize pasando como cadena a analizar el elemento en la posicion del iterador
 	for (iteW = W.begin(); iteW != W.end(); iteW++){
-		 		 // res = analize(*iteW,transiciones, Q[0], Z, Q, F);
+		 		  res = analize(*iteW,transiciones, Q[0], Z, Q, F);
 		 		  if (res)
 		 			 cout<< "La cadena " << *iteW << " es aceptada" << endl;
 		 		  else
