@@ -86,8 +86,6 @@ int main(){
 			cout << "d(" << Q[i] << ", " << Z[j] << ")" << endl;
 			getline(cin, funciona);
 			transiciones[i][j] = funciona;
-
-			cout << transiciones[i][j] <<endl;
 		}
 	}//
 
